@@ -52,7 +52,7 @@ gulp.task('fileinclude', function() {
 
 gulp.task('serve', gulp.series('fileinclude', 'assets', 'scripts', 'sass', 'sass_layout', function() {
   browserSync.init({
-    server: './docs',
+    server: './',
     open: false // set to false to disable browser autostart
   });
   gulp.watch('app/pages/*.html', gulp.series('fileinclude'));
